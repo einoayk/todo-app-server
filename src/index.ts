@@ -36,9 +36,9 @@ const typeDefs = gql`
     completedProjects: [Project]
   }
 
-  type Mutation {
-    # addProject(userId: String!, name: String!, text: String!): Project
-  }
+  #type Mutation {
+  # addProject(userId: String!, name: String!, text: String!): Project
+  #}
 `;
 
 const resolvers = {
@@ -69,10 +69,10 @@ const resolvers = {
 
       return completedProjects.docs.map(project => project.data()) as Project[];
     }
-  },
-  Mutation: {
-    //async addProject(args: { userId: string; name: string; text: string }) {}
   }
+  //Mutation: {
+  //async addProject(args: { userId: string; name: string; text: string }) {}
+  // }
 };
 
 const server = new ApolloServer({ typeDefs, resolvers, introspection: true });
