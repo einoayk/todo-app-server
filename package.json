@@ -1,0 +1,26 @@
+{
+  "name": "todo-app-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "tsc",
+    "serve": "npm run build && node lib/index.js",
+    "start": "node lib/index.js",
+    "deploy": "npm run build && gcloud app deploy"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server": "^2.4.8",
+    "firebase-admin": "^7.2.0",
+    "graphql": "^14.2.1",
+    "graphql-tag": "^2.10.1"
+  },
+  "devDependencies": {
+    "@types/graphql": "^14.2.0",
+    "tslint": "^5.15.0",
+    "typescript": "^3.4.1"
+  }
+}
